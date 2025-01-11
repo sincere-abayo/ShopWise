@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta  charset="utf-8">
+  <title>Hello, World!</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+  <style>
+    footer {
+  background-color: blueviolet;
+  color: chocolate;
+  padding: 20px;
+  text-align:display ;
+
+} 
+.login-container {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            width: 400px;
+            text-align: center;
+}
+       body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: #fff;
+        }
+            
+        
+            h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }        
+        input[type="text"],
+        input[type="password"]
+        input [type="name"]
+        input [type="email"] {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            background-color: rgba(255, 255, 255, 0.3);
+            color: #fff;
+        }
+
+  </style>
+</head>
+
+<body>
+<div class="login-container">
+  <li><form action="welcome.html">
+   <h2>Sign Up Form</h2>
+   <label for="name">First Name:</label>
+  <input type="name" id="name" name="name"placeholder="Enter your first name"required="first name"><br><br>
+ <label for="name">Last Name:</label>
+    <input type="name" id="name" name="name" placeholder="Enter your last name" required="second name"><br><br>
+     <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="test@hh.gmail" required="email"><br><br>
+       <label for="password">Password:</label>
+       <input type="password" id="password" name="password" required="password" minlength="6" maxlength="8"><br><br>
+        <label for="confirm_password">Confirm Password:</label>
+         <input type="password" id="confirm_password" name="confirm_password" required="confirm password" minlength="6" maxlength="8" ><br><br>
+    <label><h4>GENDER:</h4></label> male<input type="radio" name="gender" required="gender"> female <input type="radio" name="gender" required="gender"><br><br>
+    <label for="language"><h4>TICK LANGUAGE(S)</h4></label> English<input type="checkbox" name="English" > Kinyarwanda<input type="checkbox" name="Ikinyarwanda">Français<input type="checkbox" name="Français"><br><br>        
+    <input type="submit" value="Sign Up" style="background-color: #e64a19;color:#00FF00;border-radius:200px;padding:10px;display:center">
+ 
+         </form>
+         </li>
+ <footer>
+    <p color="blue">&copy; 2024 My website . All rights reserved.</p>
+  </footer>
+  <script>
+  
+console.log("hello")
+
+ </script>
+</div>
+</body>
+</html>
