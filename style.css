@@ -1,9 +1,10 @@
-/* Place your CSS styles in this file */
-
-h1 {
-    text-align: center;
-    font-family: "Source Sans Pro", sans-serif;
-    font-weight: normal;
+:root {
+    --primary-color: #2C3E50;
+    --secondary-color: #E74C3C;
+    --accent-color: #3498DB;
+    --text-color: #333;
+    --light-bg: #F5F6FA;
+    --white: #FFFFFF;
 }
 
 * {
@@ -13,134 +14,337 @@ h1 {
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
-    background-color: #f4f4f4;
-    color: #333;
+    color: var(--text-color);
 }
 
-/* Header Styles */
-header {
-    background-color: #2c3e50;
-    padding: 1rem;
-    color: white;
-}
-
-.wrapper {
+/* Navbar Styles */
+.navbar {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    gap: 2rem;
-}
-
-.img-eye {
-    height: 250px;
-    width: 200px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 1rem 5%;
+    background: var(--white);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
 }
 
 .logo {
-    height: 210px;
-    width: 180px;
-    box-shadow: 0 4px 8px rgba(255, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
 
-/* Navigation */
-nav ul {
-    list-style: none;
+.logo img {
+    height: 40px;
+}
+
+.nav-links {
     display: flex;
     gap: 2rem;
-    padding: 1rem 0;
+    align-items: center;
 }
 
-nav ul li a {
-    color: white;
+.nav-links a {
     text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
     transition: color 0.3s ease;
-}
-
-nav ul li a:hover {
-    color: #3498db;
-}
-
-/* Main Content */
-main {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem;
-}
-
-section {
-    margin-bottom: 3rem;
-    padding: 2rem;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-/* Buttons */
-.button, .cta-button {
-    display: inline-block;
-    padding: 0.8rem 1.5rem;
-    background-color: #333333;
-    color: #00FF00;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: transform 0.3s ease;
-}
-
-.button:hover, .cta-button:hover {
-    transform: translateY(-2px);
 }
 
 .auth-buttons {
     display: flex;
     gap: 1rem;
+}
+
+.login-btn, .signup-btn {
+    padding: 0.5rem 1.5rem;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.login-btn {
+    border: 2px solid var(--primary-color);
+}
+
+.signup-btn {
+    background: var(--primary-color);
+    color: var(--white);
+}
+
+/* Hero Section */
+#hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
     justify-content: center;
-    margin: 2rem 0;
-}
-
-/* Features List */
-#features ul {
-    list-style: none;
-    padding-left: 1rem;
-}
-
-#features li {
-    margin-bottom: 0.5rem;
-    position: relative;
-    padding-left: 1.5rem;
-}
-
-#features li:before {
-    content: "•";
-    position: absolute;
-    left: 0;
-    color: #3498db;
-}
-
-/* Footer */
-footer {
-    background-color: #2c3e50;
-    color: white;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('africa-market.jpg');
+    background-size: cover;
+    background-position: center;
+    color: var(--white);
     text-align: center;
-    padding: 1.5rem;
+    padding: 0 1rem;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
     margin-top: 2rem;
+}
+
+.cta-primary, .cta-secondary {
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+.cta-primary {
+    background: var(--secondary-color);
+    color: var(--white);
+}
+
+.cta-secondary {
+    background: transparent;
+    border: 2px solid var(--white);
+    color: var(--white);
+}
+
+/* Features Section */
+#features {
+    padding: 5rem 5%;
+    background: var(--light-bg);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.feature-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        gap: 1rem;
+    .nav-links {
+        display: none;
     }
 
-    .wrapper {
-        flex-direction: column;
+    .menu-toggle {
+        display: block;
     }
 
-    .img-eye, .logo {
-        width: 150px;
-        height: auto;
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
     }
 }
 
+@media (min-width: 769px) {
+    .menu-toggle {
+        display: none;
+    }
+}
+/* Marketplace Preview Section */
+#marketplace-preview {
+    padding: 5rem 5%;
+    background: var(--white);
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+/* How It Works Section */
+#how-it-works {
+    padding: 5rem 5%;
+    background: var(--light-bg);
+}
+
+.steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+.step {
+    text-align: center;
+    position: relative;
+    padding: 2rem;
+    background: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.step-number {
+    width: 40px;
+    height: 40px;
+    background: var(--primary-color);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin: 0 auto 1rem;
+}
+
+.step h3 {
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.step p {
+    color: var(--text-color);
+    font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+    .steps {
+        gap: 2rem;
+    }
+}
+/* Footer Styles */
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+    padding: 4rem 5%;
+    background: var(--primary-color);
+    color: var(--white);
+}
+
+.footer-section h4 {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    color: var(--accent-color);
+}
+
+.footer-section a {
+    display: block;
+    color: var(--white);
+    text-decoration: none;
+    margin-bottom: 0.8rem;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: var(--accent-color);
+}
+
+.footer-section p {
+    margin-bottom: 0.8rem;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 1.5rem;
+    background: rgba(0, 0, 0, 0.2);
+    color: var(--white);
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        gap: 2rem;
+        padding: 3rem 5%;
+    }
+}
+.product-card {
+    background: var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-image {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.product-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: var(--secondary-color);
+    color: var(--white);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+}
+
+.product-info {
+    padding: 1.5rem;
+}
+
+.product-info h3 {
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+.product-origin {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.product-price {
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.view-details {
+    width: 100%;
+    padding: 0.8rem;
+    background: var(--primary-color);
+    color: var(--white);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.view-details:hover {
+    background: var(--accent-color);
+}
