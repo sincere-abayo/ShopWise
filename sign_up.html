@@ -5,8 +5,225 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Navbar */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            background-color: #333;
+            color: white;
+            z-index: 1000;
+        }
+
+        .navbar .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar .logo img {
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .navbar .logo span {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #ffcc00;
+        }
+
+        .auth-buttons {
+            margin-left: 20px;
+        }
+
+        .auth-buttons a {
+            padding: 8px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .auth-buttons .login-btn {
+            background: none;
+            color: white;
+            border: 1px solid white;
+        }
+
+        .auth-buttons .signup-btn {
+            background: #ffcc00;
+            color: black;
+        }
+
+        .auth-buttons .login-btn:hover {
+            background: white;
+            color: black;
+        }
+
+        .auth-buttons .signup-btn:hover {
+            background: #ffaa00;
+        }
+
+        /* Full-page background */
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: linear-gradient(to right, #f4f4f4, #ddd);
+            padding-top: 80px; /* Prevents content from being hidden under navbar */
+        }
+
+        .signup-container {
+            background: white;
+            padding: 3rem;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            width: 400px;
+            max-width: 90%;
+            text-align: center;
+        }
+
+        .signup-form h2 {
+            margin-bottom: 1.5rem;
+            color: #333;
+        }
+
+        .input-group {
+            margin-bottom: 1rem;
+            text-align: left;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 14px;
+            color: #333;
+        }
+
+        .input-wrapper {
+            display: flex;
+            align-items: center;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            background: #f9f9f9;
+        }
+
+        .input-wrapper i {
+            margin-right: 10px;
+            color: #555;
+        }
+
+        .input-wrapper input {
+            width: 100%;
+            border: none;
+            outline: none;
+            background: transparent;
+            color: #333;
+        }
+
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background: #f9f9f9;
+            color: #333;
+        }
+
+        .signup-btn {
+            width: 100%;
+            padding: 12px;
+            background: #ffcc00;
+            color: #333;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .signup-btn:hover {
+            background: #ffaa00;
+        }
+
+        .login-link {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #333;
+        }
+
+        .login-link a {
+            color: #ffcc00;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .login-link a:hover {
+            text-decoration: underline;
+        }
+
+        @media screen and (max-width: 768px) {
+            .signup-container {
+                width: 90%;
+                padding: 2rem;
+            }
+        }
+    </style>
 </head>
 <body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="im2.png" alt="ShopWise Logo">
+                <span>ShopWise</span>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="#marketplace">Marketplace</a>
+                <a href="#about">About</a>
+                <a href="#how-it-works">How It Works</a>
+                <div class="auth-buttons">
+                    <a href="login.html" class="login-btn">Login</a>
+                    <a href="sign_up.html" class="signup-btn">Sign Up</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Sign-up Form -->
     <div class="signup-container">
         <form class="signup-form" id="signupForm">
             <h2>Sign Up</h2>
@@ -51,114 +268,6 @@
             window.location.href = dashboardUrl;
         });
     </script>
+
 </body>
 </html>
-
-<style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: Arial, sans-serif;
-    }
-    
-    /* Gradient Background */
-    body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        background: linear-gradient(135deg, #1e3c72, #2a5298); /* Dark blue gradient */
-    }
-
-    .signup-container {
-        background: rgba(255, 255, 255, 0.2);
-        backdrop-filter: blur(10px);
-        padding: 2rem;
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-        border-radius: 8px;
-        width: 350px;
-        text-align: center;
-        color: white;
-    }
-
-    .signup-form h2 {
-        margin-bottom: 1.5rem;
-        color: #fff;
-    }
-
-    .input-group {
-        margin-bottom: 1rem;
-        text-align: left;
-    }
-
-    .input-group label {
-        display: block;
-        margin-bottom: 5px;
-        font-size: 14px;
-        color: #fff;
-    }
-
-    .input-wrapper {
-        display: flex;
-        align-items: center;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        padding: 10px;
-        background: rgba(255, 255, 255, 0.2);
-    }
-
-    .input-wrapper i {
-        margin-right: 10px;
-        color: #fff;
-    }
-
-    .input-wrapper input {
-        width: 100%;
-        border: none;
-        outline: none;
-        background: transparent;
-        color: white;
-    }
-
-    select {
-        width: 100%;
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        background: rgba(255, 255, 255, 0.2);
-        color: white;
-    }
-
-    .signup-btn {
-        width: 100%;
-        padding: 10px;
-        background: #ffcc00;
-        color: #333;
-        border: none;
-        border-radius: 5px;
-        font-size: 16px;
-        cursor: pointer;
-        font-weight: bold;
-    }
-
-    .signup-btn:hover {
-        background: #ffaa00;
-    }
-
-    .login-link {
-        margin-top: 10px;
-        font-size: 14px;
-        color: white;
-    }
-
-    .login-link a {
-        color: #ffcc00;
-        text-decoration: none;
-        font-weight: bold;
-    }
-
-    .login-link a:hover {
-        text-decoration: underline;
-    }
-</style>
