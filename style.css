@@ -348,3 +348,56 @@ body {
 .view-details:hover {
     background: var(--accent-color);
 }
+
+
+
+
+
+
+#about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #f8b400;
+}
+
+#about p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+#about h3 {
+    font-size: 2rem;
+    margin-top: 30px;
+    color: #ffcc00;
+}
+
+#about ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px auto;
+    max-width: 700px;
+}
+
+#about ul li {
+    font-size: 1.2rem;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#about ul li::before {
+    
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    margin-right: 10px;
+    color: #f8b400;
+    font-size: 1.5rem;
+}
+
+

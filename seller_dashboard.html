@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seller Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <h2>Seller Dashboard</h2>
+            <ul>
+                <li><a href="#" class="active"><i class="fa fa-home"></i> Dashboard</a></li>
+                <li><a href="#"><i class="fa fa-box"></i> Manage Products</a></li>
+                <li><a href="#"><i class="fa fa-shopping-cart"></i> Orders</a></li>
+                <li><a href="#"><i class="fa fa-chart-line"></i> Sales Reports</a></li>
+                <li><a href="#"><i class="fa fa-cog"></i> Settings</a></li>
+                <li><a href="login.html"><i class="fa fa-sign-out-alt"></i> Logout</a></li>
+            </ul>
+        </aside>
+        <main class="main-content">
+            <header>
+                <h1>Welcome, Seller</h1>
+            </header>
+            <section class="dashboard-summary">
+                <div class="summary-card">
+                    <i class="fa fa-box"></i>
+                    <div>
+                        <h3>120</h3>
+                        <p>Products</p>
+                    </div>
+                </div>
+                <div class="summary-card">
+                    <i class="fa fa-shopping-cart"></i>
+                    <div>
+                        <h3>45</h3>
+                        <p>Orders</p>
+                    </div>
+                </div>
+                <div class="summary-card">
+                    <i class="fa fa-dollar-sign"></i>
+                    <div>
+                        <h3>$2,500</h3>
+                        <p>Total Sales</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
+    body {
+        display: flex;
+        height: 100vh;
+    }
+    .dashboard-container {
+        display: flex;
+        width: 100%;
+    }
+    .sidebar {
+        width: 250px;
+        background: #333;
+        color: white;
+        padding: 20px;
+    }
+    .sidebar h2 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .sidebar ul {
+        list-style: none;
+    }
+    .sidebar ul li {
+        margin: 15px 0;
+    }
+    .sidebar ul li a {
+        color: white;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 10px;
+        border-radius: 5px;
+    }
+    .sidebar ul li a:hover, .sidebar ul li a.active {
+        background: #007bff;
+    }
+    .main-content {
+        flex-grow: 1;
+        padding: 20px;
+        background: #f4f4f4;
+    }
+    header {
+        margin-bottom: 20px;
+    }
+    .dashboard-summary {
+        display: flex;
+        gap: 20px;
+    }
+    .summary-card {
+        background: white;
+        padding: 20px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        flex: 1;
+    }
+    .summary-card i {
+        font-size: 2rem;
+        color: #007bff;
+    }
+    .summary-card h3 {
+        margin: 0;
+        font-size: 24px;
+    }
+    .summary-card p {
+        margin: 0;
+        font-size: 14px;
+        color: gray;
+    }
+</style>
