@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buyer Dashboard</title>
+    <title>Seller Dashboard</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
     <style>
         * {
             margin: 0;
@@ -14,14 +15,18 @@
         }
         body {
             display: flex;
-            height: 100vh;
-            background: #f4f4f4;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .dashboard-container {
+            display: flex;
+            flex: 1;
         }
         .sidebar {
             width: 250px;
-            background: #2a5298;
-            padding: 20px;
+            background: #333;
             color: white;
+            padding: 20px;
         }
         .sidebar h2 {
             text-align: center;
@@ -31,77 +36,97 @@
             list-style: none;
         }
         .sidebar ul li {
-            padding: 10px;
-            cursor: pointer;
+            margin: 15px 0;
         }
-        .sidebar ul li:hover {
-            background: rgba(255, 255, 255, 0.2);
+        .sidebar ul li a {
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px;
             border-radius: 5px;
+        }
+        .sidebar ul li a:hover, .sidebar ul li a.active {
+            background: #007bff;
         }
         .main-content {
-            flex: 1;
+            flex-grow: 1;
             padding: 20px;
+            background: #f4f4f4;
         }
-        .dashboard-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: white;
-            padding: 15px;
-            border-radius: 5px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-        }
-        .cards {
+        .dashboard-summary {
             display: flex;
             gap: 20px;
-            margin-top: 20px;
         }
-        .card {
-            flex: 1;
+        .summary-card {
             background: white;
             padding: 20px;
-            border-radius: 5px;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            flex: 1;
         }
-        .card i {
+        .summary-card i {
             font-size: 2rem;
-            margin-bottom: 10px;
+            color: #007bff;
+        }
+        footer {
+            text-align: center;
+            background: #333;
+            color: white;
+            padding: 15px;
+            margin-top: auto;
         }
     </style>
 </head>
 <body>
-    <div class="sidebar">
-        <h2>Buyer Dashboard</h2>
-        <ul>
-            <li><i class="fa fa-home"></i> Dashboard</li>
-            <li><i class="fa fa-shopping-cart"></i> Orders</li>
-            <li><i class="fa fa-user"></i> Profile</li>
-            <li><i class="fa fa-sign-out-alt"></i> Logout</li>
-        </ul>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <h2>Seller Dashboard</h2>
+            <ul>
+                <li><a href="#" class="active"><i class="fa fa-home"></i> Dashboard</a></li>
+                <li><a href="#"><i class="fa fa-box"></i> Manage Products</a></li>
+                <li><a href="#"><i class="fa fa-shopping-cart"></i> Orders</a></li>
+                <li><a href="#"><i class="fa fa-chart-line"></i> Sales Reports</a></li>
+                <li><a href="#"><i class="fa fa-cog"></i> Settings</a></li>
+                <li><a href="login.html"><i class="fa fa-sign-out-alt"></i> Logout</a></li>
+            </ul>
+        </aside>
+        <main class="main-content">
+            <header>
+                <h1>Welcome, Seller</h1>
+            </header>
+            <section class="dashboard-summary">
+                <div class="summary-card">
+                    <i class="fa fa-box"></i>
+                    <div>
+                        <h3>120</h3>
+                        <p>Products</p>
+                    </div>
+                </div>
+                <div class="summary-card">
+                    <i class="fa fa-shopping-cart"></i>
+                    <div>
+                        <h3>45</h3>
+                        <p>Orders</p>
+                    </div>
+                </div>
+                <div class="summary-card">
+                    <i class="fa fa-dollar-sign"></i>
+                    <div>
+                        <h3>$2,500</h3>
+                        <p>Total Sales</p>
+                    </div>
+                </div>
+            </section>
+        </main>
     </div>
-    <div class="main-content">
-        <div class="dashboard-header">
-            <h2>Welcome, Buyer</h2>
-            <button style="padding: 10px; background: #2a5298; color: white; border: none; border-radius: 5px;">New Order</button>
-        </div>
-        <div class="cards">
-            <div class="card">
-                <i class="fa fa-box"></i>
-                <h3>10</h3>
-                <p>Orders Placed</p>
-            </div>
-            <div class="card">
-                <i class="fa fa-truck"></i>
-                <h3>5</h3>
-                <p>Orders Delivered</p>
-            </div>
-            <div class="card">
-                <i class="fa fa-clock"></i>
-                <h3>2</h3>
-                <p>Pending Orders</p>
-            </div>
-        </div>
-    </div>
+
+    <footer>
+        <p>&copy; 2025 Your Company. All rights reserved.</p>
+    </footer>
 </body>
 </html>
