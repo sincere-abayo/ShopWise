@@ -248,7 +248,7 @@
             <ul class="nav-links" id="navLinks">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="#marketplace">Marketplace</a></li>
-                <li><a href="#about">About</a></li>
+                <li><a href="about_us.html">About</a></li>
                 <li><a href="#how-it-works">How It Works</a></li>
                 <li class="auth-buttons">
                     <a href="sign_up.html" class="signup-btn">Sign Up</a>
@@ -284,20 +284,31 @@
             <p class="register-link">Don't have an account? <a href="sign_up.html">Register</a></p>
         </form>
     </div>
+    
 
     <script>
         document.getElementById('menuToggle').addEventListener('click', function () {
             document.getElementById('navLinks').classList.toggle('active');
         });
-
+    
         let currentRole = 'Buyer';
-
+    
         function toggleRole() {
             currentRole = currentRole === 'Buyer' ? 'Seller' : 'Buyer';
             document.getElementById('userRole').innerText = currentRole;
             document.getElementById('switchRole').innerText = currentRole === 'Buyer' ? 'Seller' : 'Buyer';
         }
+    
+        document.getElementById('loginForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent default form submission
+            if (currentRole === 'Buyer') {
+                window.location.href = "buyer_dashboard.html";
+            } else {
+                window.location.href = "seller_dashboard.html";
+            }
+        });
     </script>
+    
 
 </body>
 </html>

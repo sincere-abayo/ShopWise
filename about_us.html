@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - ShopWise</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+        
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            background: #333;
+            color: white;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .logo img {
+            height: 40px;
+            width: auto;
+            margin-right: 10px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            text-decoration: underline;
+            color: #ffcc00;
+        }
+
+        .auth-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .signup-btn {
+            background: #ffcc00;
+            color: #333;
+            padding: 8px 12px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .content {
+            padding: 100px 20px 40px;
+            text-align: center;
+            background: #f4f4f4;
+        }
+
+        .about-container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .services-list {
+            list-style: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+
+        .services-list li {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+            transition: 0.3s;
+        }
+
+        .services-list li:hover {
+            background: #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="im2.png" alt="ShopWise Logo">
+                <span>ShopWise</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="marketplace.html">Marketplace</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="how-it-works.html">How It Works</a></li>
+                <li class="auth-buttons">
+                    <a href="sign_up.html" class="signup-btn">Sign Up</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about" class="content">
+        <div class="about-container">
+            <h2 style="color: #007bff; margin-bottom: 20px;">About Us</h2>
+            <p style="color: #555; line-height: 1.6;">
+                The <strong>ShopWise Program</strong> aims to improve retail in Africa by offering smart solutions to make stores more efficient, enhance customer experiences, and help local shops manage inventory more effectively.
+            </p>
+            
+            <h3 style="margin-top: 30px; color: #007bff;">Our Services</h3>
+            <ul class="services-list">
+                <li><strong>Inventory Management:</strong> Real-time tracking to reduce waste and optimize ordering.</li>
+                <li><strong>Customer Analytics:</strong> Tools to analyze shopping habits and enable personalized marketing.</li>
+                <li><strong>Mobile Payments:</strong> Fast and secure payment options for seamless transactions.</li>
+            </ul>
+
+            <h3 style="margin-top: 30px; color: #333;">Our Vision</h3>
+            <p style="color: #555; line-height: 1.6;">
+                The ShopWise Program aims to modernize and digitize Africa’s retail industry by integrating smart solutions to enhance customer satisfaction and contribute to Africa’s economic growth.
+            </p>
+        </div>
+    </section>
+</body>
+</html>
