@@ -17,7 +17,7 @@
             <div class="nav-links">
                 <a href="index.html">Home</a>
                 <a href="#marketplace">Marketplace</a>
-                <a href="#about">About</a>
+                <a href="about_us.html">About</a>
                 <a href="#how-it-works">How It Works</a>
                 <div class="auth-buttons">
                     <a href="login.html" class="login-btn">Login</a>
@@ -67,6 +67,53 @@
                 </div>
             </div>
         </section>
+        
+        <style>
+            #features {
+                text-align: center;
+                padding: 40px 5%;
+            }
+        
+            .features-grid {
+                display: flex;
+                justify-content: space-between;
+                gap: 20px;
+                flex-wrap: wrap;
+            }
+        
+            .feature-card {
+                flex: 1;
+                min-width: 250px;
+                max-width: 300px;
+                padding: 15px;
+                height: 150px; /* Reduced height */
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                color: white;
+                border-radius: 8px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+        
+            .feature-card i {
+                font-size: 24px;
+                margin-bottom: 10px;
+            }
+        
+            @media (max-width: 768px) {
+                .features-grid {
+                    flex-direction: column;
+                    align-items: center;
+                }
+        
+                .feature-card {
+                    width: 100%;
+                    max-width: 350px;
+                }
+            }
+        </style>
+        
         
 
         <section id="marketplace-preview">

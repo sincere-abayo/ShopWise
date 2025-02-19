@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seller Dashboard</title>
+    <title>Buyer Dashboard</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
     <style>
@@ -27,6 +27,8 @@
             background: #333;
             color: white;
             padding: 20px;
+            position: fixed;
+            height: 100%;
         }
         .sidebar h2 {
             text-align: center;
@@ -51,6 +53,7 @@
             background: #007bff;
         }
         .main-content {
+            margin-left: 260px;
             flex-grow: 1;
             padding: 20px;
             background: #f4f4f4;
@@ -58,6 +61,7 @@
         .dashboard-summary {
             display: flex;
             gap: 20px;
+            flex-wrap: wrap;
         }
         .summary-card {
             background: white;
@@ -68,65 +72,107 @@
             align-items: center;
             gap: 15px;
             flex: 1;
+            min-width: 250px;
         }
         .summary-card i {
             font-size: 2rem;
             color: #007bff;
         }
-        footer {
-            text-align: center;
-            background: #333;
+        .orders-table, .wishlist-section {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background: #007bff;
             color: white;
-            padding: 15px;
-            margin-top: auto;
         }
     </style>
 </head>
 <body>
     <div class="dashboard-container">
         <aside class="sidebar">
-            <h2>Seller Dashboard</h2>
+            <h2>Buyer Dashboard</h2>
             <ul>
                 <li><a href="#" class="active"><i class="fa fa-home"></i> Dashboard</a></li>
-                <li><a href="#"><i class="fa fa-box"></i> Manage Products</a></li>
-                <li><a href="#"><i class="fa fa-shopping-cart"></i> Orders</a></li>
-                <li><a href="#"><i class="fa fa-chart-line"></i> Sales Reports</a></li>
+                <li><a href="#"><i class="fa fa-shopping-cart"></i> My Orders</a></li>
+                <li><a href="#"><i class="fa fa-heart"></i> Wishlist</a></li>
+                <li><a href="#"><i class="fa fa-user"></i> Profile</a></li>
+                <li><a href="#"><i class="fa fa-envelope"></i> Messages</a></li>
                 <li><a href="#"><i class="fa fa-cog"></i> Settings</a></li>
                 <li><a href="login.html"><i class="fa fa-sign-out-alt"></i> Logout</a></li>
             </ul>
         </aside>
         <main class="main-content">
             <header>
-                <h1>Welcome, Seller</h1>
+                <h1>Welcome, Buyer</h1>
             </header>
             <section class="dashboard-summary">
                 <div class="summary-card">
-                    <i class="fa fa-box"></i>
-                    <div>
-                        <h3>120</h3>
-                        <p>Products</p>
-                    </div>
-                </div>
-                <div class="summary-card">
                     <i class="fa fa-shopping-cart"></i>
                     <div>
-                        <h3>45</h3>
-                        <p>Orders</p>
+                        <h3>5</h3>
+                        <p>Active Orders</p>
                     </div>
                 </div>
                 <div class="summary-card">
-                    <i class="fa fa-dollar-sign"></i>
+                    <i class="fa fa-heart"></i>
                     <div>
-                        <h3>$2,500</h3>
-                        <p>Total Sales</p>
+                        <h3>12</h3>
+                        <p>Wishlist Items</p>
+                    </div>
+                </div>
+                <div class="summary-card">
+                    <i class="fa fa-envelope"></i>
+                    <div>
+                        <h3>3</h3>
+                        <p>New Messages</p>
                     </div>
                 </div>
             </section>
+            <section class="orders-table">
+                <h2>Recent Orders</h2>
+                <table>
+                    <tr>
+                        <th>Order ID</th>
+                        <th>Product</th>
+                        <th>Status</th>
+                        <th>Expected Delivery</th>
+                    </tr>
+                    <tr>
+                        <td>#2023</td>
+                        <td>Smartphone</td>
+                        <td>Shipped</td>
+                        <td>Feb 25</td>
+                    </tr>
+                    <tr>
+                        <td>#2024</td>
+                        <td>Headphones</td>
+                        <td>Processing</td>
+                        <td>Feb 28</td>
+                    </tr>
+                </table>
+            </section>
+            <section class="wishlist-section">
+                <h2>Wishlist</h2>
+                <ul>
+                    <li>Wireless Earbuds</li>
+                    <li>Laptop Stand</li>
+                    <li>Gaming Mouse</li>
+                </ul>
+            </section>
         </main>
     </div>
-
-    <footer>
-        <p>&copy; 2025 Your Company. All rights reserved.</p>
-    </footer>
 </body>
 </html>
