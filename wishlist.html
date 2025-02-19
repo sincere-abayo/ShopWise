@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buyer Dashboard</title>
+    <title>Wishlist</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
     <style>
@@ -58,27 +58,7 @@
             padding: 20px;
             background: #f4f4f4;
         }
-        .dashboard-summary {
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-        .summary-card {
-            background: white;
-            padding: 20px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            flex: 1;
-            min-width: 250px;
-        }
-        .summary-card i {
-            font-size: 2rem;
-            color: #007bff;
-        }
-        .orders-table, .wishlist-section {
+        .wishlist-table {
             background: white;
             padding: 20px;
             border-radius: 8px;
@@ -98,6 +78,10 @@
             background: #007bff;
             color: white;
         }
+        .remove-btn {
+            color: red;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
@@ -105,72 +89,47 @@
         <aside class="sidebar">
             <h2>Buyer Dashboard</h2>
             <ul>
-                <li><a href="#" class="active"><i class="fa fa-home"></i> Dashboard</a></li>
+                <li><a href="buyer_dashboard.html"><i class="fa fa-home"></i> Dashboard</a></li>
                 <li><a href="buyer_orders.html"><i class="fa fa-shopping-cart"></i> My Orders</a></li>
-                <li><a href="wishlist.html"><i class="fa fa-heart"></i> Wishlist</a></li>
+                <li><a href="wishlist.html" class="active"><i class="fa fa-heart"></i> Wishlist</a></li>
                 <li><a href="b_profile.html"><i class="fa fa-user"></i> Profile</a></li>
-                <li><a href="#"><i class="fa fa-envelope"></i> Messages</a></li>
-                <li><a href="#"><i class="fa fa-cog"></i> Settings</a></li>
+                <li><a href="messages.html"><i class="fa fa-envelope"></i> Messages</a></li>
+                <li><a href="settings.html"><i class="fa fa-cog"></i> Settings</a></li>
                 <li><a href="login.html"><i class="fa fa-sign-out-alt"></i> Logout</a></li>
             </ul>
         </aside>
         <main class="main-content">
             <header>
-                <h1>Welcome, Buyer</h1>
+                <h1>My Wishlist</h1>
             </header>
-            <section class="dashboard-summary">
-                <div class="summary-card">
-                    <i class="fa fa-shopping-cart"></i>
-                    <div>
-                        <h3>5</h3>
-                        <p>Active Orders</p>
-                    </div>
-                </div>
-                <div class="summary-card">
-                    <i class="fa fa-heart"></i>
-                    <div>
-                        <h3>12</h3>
-                        <p>Wishlist Items</p>
-                    </div>
-                </div>
-                <div class="summary-card">
-                    <i class="fa fa-envelope"></i>
-                    <div>
-                        <h3>3</h3>
-                        <p>New Messages</p>
-                    </div>
-                </div>
-            </section>
-            <section class="orders-table">
-                <h2>Recent Orders</h2>
+            <section class="wishlist-table">
+                <h2>Wishlist Items</h2>
                 <table>
                     <tr>
-                        <th>Order ID</th>
                         <th>Product</th>
-                        <th>Status</th>
-                        <th>Expected Delivery</th>
+                        <th>Price</th>
+                        <th>Availability</th>
+                        <th>Action</th>
                     </tr>
                     <tr>
-                        <td>#2023</td>
-                        <td>Smartphone</td>
-                        <td>Shipped</td>
-                        <td>Feb 25</td>
+                        <td>Wireless Earbuds</td>
+                        <td>$50</td>
+                        <td>In Stock</td>
+                        <td><i class="fa fa-trash remove-btn"></i></td>
                     </tr>
                     <tr>
-                        <td>#2024</td>
-                        <td>Headphones</td>
-                        <td>Processing</td>
-                        <td>Feb 28</td>
+                        <td>Laptop Stand</td>
+                        <td>$30</td>
+                        <td>Out of Stock</td>
+                        <td><i class="fa fa-trash remove-btn"></i></td>
+                    </tr>
+                    <tr>
+                        <td>Gaming Mouse</td>
+                        <td>$25</td>
+                        <td>In Stock</td>
+                        <td><i class="fa fa-trash remove-btn"></i></td>
                     </tr>
                 </table>
-            </section>
-            <section class="wishlist-section">
-                <h2>Wishlist</h2>
-                <ul>
-                    <li>Wireless Earbuds</li>
-                    <li>Laptop Stand</li>
-                    <li>Gaming Mouse</li>
-                </ul>
             </section>
         </main>
     </div>

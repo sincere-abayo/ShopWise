@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buyer Dashboard</title>
+    <title>My Orders</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
     <style>
@@ -58,27 +58,7 @@
             padding: 20px;
             background: #f4f4f4;
         }
-        .dashboard-summary {
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-        .summary-card {
-            background: white;
-            padding: 20px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            flex: 1;
-            min-width: 250px;
-        }
-        .summary-card i {
-            font-size: 2rem;
-            color: #007bff;
-        }
-        .orders-table, .wishlist-section {
+        .orders-table {
             background: white;
             padding: 20px;
             border-radius: 8px;
@@ -98,6 +78,14 @@
             background: #007bff;
             color: white;
         }
+        .filter-section {
+            margin-bottom: 10px;
+        }
+        select {
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
     </style>
 </head>
 <body>
@@ -105,44 +93,29 @@
         <aside class="sidebar">
             <h2>Buyer Dashboard</h2>
             <ul>
-                <li><a href="#" class="active"><i class="fa fa-home"></i> Dashboard</a></li>
-                <li><a href="buyer_orders.html"><i class="fa fa-shopping-cart"></i> My Orders</a></li>
+                <li><a href="buyer_dashboard.html"><i class="fa fa-home"></i> Dashboard</a></li>
+                <li><a href="buyer_orders.html" class="active"><i class="fa fa-shopping-cart"></i> My Orders</a></li>
                 <li><a href="wishlist.html"><i class="fa fa-heart"></i> Wishlist</a></li>
                 <li><a href="b_profile.html"><i class="fa fa-user"></i> Profile</a></li>
-                <li><a href="#"><i class="fa fa-envelope"></i> Messages</a></li>
-                <li><a href="#"><i class="fa fa-cog"></i> Settings</a></li>
+                <li><a href="messages.html"><i class="fa fa-envelope"></i> Messages</a></li>
+                <li><a href="settings.html"><i class="fa fa-cog"></i> Settings</a></li>
                 <li><a href="login.html"><i class="fa fa-sign-out-alt"></i> Logout</a></li>
             </ul>
         </aside>
         <main class="main-content">
             <header>
-                <h1>Welcome, Buyer</h1>
+                <h1>My Orders</h1>
             </header>
-            <section class="dashboard-summary">
-                <div class="summary-card">
-                    <i class="fa fa-shopping-cart"></i>
-                    <div>
-                        <h3>5</h3>
-                        <p>Active Orders</p>
-                    </div>
-                </div>
-                <div class="summary-card">
-                    <i class="fa fa-heart"></i>
-                    <div>
-                        <h3>12</h3>
-                        <p>Wishlist Items</p>
-                    </div>
-                </div>
-                <div class="summary-card">
-                    <i class="fa fa-envelope"></i>
-                    <div>
-                        <h3>3</h3>
-                        <p>New Messages</p>
-                    </div>
-                </div>
-            </section>
             <section class="orders-table">
-                <h2>Recent Orders</h2>
+                <div class="filter-section">
+                    <label for="status-filter">Filter by Status:</label>
+                    <select id="status-filter">
+                        <option value="all">All</option>
+                        <option value="shipped">Shipped</option>
+                        <option value="processing">Processing</option>
+                        <option value="delivered">Delivered</option>
+                    </select>
+                </div>
                 <table>
                     <tr>
                         <th>Order ID</th>
@@ -162,15 +135,13 @@
                         <td>Processing</td>
                         <td>Feb 28</td>
                     </tr>
+                    <tr>
+                        <td>#2025</td>
+                        <td>Gaming Mouse</td>
+                        <td>Delivered</td>
+                        <td>Feb 20</td>
+                    </tr>
                 </table>
-            </section>
-            <section class="wishlist-section">
-                <h2>Wishlist</h2>
-                <ul>
-                    <li>Wireless Earbuds</li>
-                    <li>Laptop Stand</li>
-                    <li>Gaming Mouse</li>
-                </ul>
             </section>
         </main>
     </div>

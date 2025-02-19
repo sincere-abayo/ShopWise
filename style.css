@@ -78,7 +78,7 @@ body {
 
 /* Hero Section */
 #hero {
-    height: 20vh; /* Reduced from 70vh to 35vh */
+    height: 45vh; /* Reduced from 70vh to 35vh */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -126,7 +126,7 @@ body {
 /* Responsive Adjustments */
 @media (max-width: 768px) {
     #hero {
-        height: 30vh; /* Further reduction for mobile */
+        height: 60vh; /* Further reduction for mobile */
     }
 
     .hero-content h1 {
