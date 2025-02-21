@@ -8,27 +8,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="logo">
-                <img src="im2.png" alt="ShopWise Logo">
-                <span>ShopWise</span>
-            </div>
-            <div class="nav-links">
-                <a href="index.html">Home</a>
-                <a href="#marketplace">Marketplace</a>
-                <a href="about_us.html">About</a>
-                <a href="#how-it-works">How It Works</a>
-                <div class="auth-buttons">
-                    <a href="login.html" class="login-btn">Login</a>
-                    <a href="sign_up.html" class="signup-btn">Sign Up</a>
-                </div>
-            </div>
-            <div class="menu-toggle">
-                <i class="fas fa-bars"></i>
-            </div>
-        </nav>
-    </header>
+
+    <!-- Navigation will be dynamically loaded here -->
+    <header id="nav-placeholder"></header>
 
     <main>
         <section id="hero">
@@ -67,192 +49,62 @@
                 </div>
             </div>
         </section>
-        
-        <style>
-            #features {
-                text-align: center;
-                padding: 40px 5%;
-            }
-        
-            .features-grid {
-                display: flex;
-                justify-content: space-between;
-                gap: 20px;
-                flex-wrap: wrap;
-            }
-        
-            .feature-card {
-                flex: 1;
-                min-width: 250px;
-                max-width: 300px;
-                padding: 15px;
-                height: 150px; /* Reduced height */
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                color: white;
-                border-radius: 8px;
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            }
-        
-            .feature-card i {
-                font-size: 24px;
-                margin-bottom: 10px;
-            }
-        
-            @media (max-width: 768px) {
-                .features-grid {
-                    flex-direction: column;
-                    align-items: center;
-                }
-        
-                .feature-card {
-                    width: 100%;
-                    max-width: 350px;
-                }
-            }
-        </style>
-        
-        
 
         <section id="marketplace-preview">
-          <h2>Featured Products</h2>
-          <div class="product-grid">
-              <div class="product-card">
-                  <div class="product-image">
-                      <img src="products/coffee.jpg" alt="Premium Rwandan Coffee">
-                      <span class="product-badge">Featured</span>
-                  </div>
-                  <div class="product-info">
-                      <h3>Premium Rwandan Coffee</h3>
-                      <p class="product-origin">Origin: Nyungwe, Rwanda</p>
-                      <p class="product-price">$24.99/kg</p>
-                      <button class="view-details">View Details</button>
-                  </div>
-              </div>
-      
-              <div class="product-card">
-                  <div class="product-image">
-                      <img src="products/basket.jpeg" alt="Traditional Basket">
-                      <span class="product-badge">New</span>
-                  </div>
-                  <div class="product-info">
-                      <h3>Handwoven Peace Basket</h3>
-                      <p class="product-origin">Origin: Kigali, Rwanda</p>
-                      <p class="product-price">$39.99</p>
-                      <button class="view-details">View Details</button>
-                  </div>
-              </div>
-      
-              <div class="product-card">
-                  <div class="product-image">
-                      <img src="products/tea.jpeg" alt="Premium Tea Leaves">
-                  </div>
-                  <div class="product-info">
-                      <h3>Organic Tea Leaves</h3>
-                      <p class="product-origin">Origin: Gisovu, Rwanda</p>
-                      <p class="product-price">$18.99/kg</p>
-                      <button class="view-details">View Details</button>
-                  </div>
-              </div>
-      
-              <div class="product-card">
-                  <div class="product-image">
-                      <img src="products/art.jpeg" alt="Contemporary Art">
-                      <span class="product-badge">Limited</span>
-                  </div>
-                  <div class="product-info">
-                      <h3>Contemporary Wall Art</h3>
-                      <p class="product-origin">Origin: Huye, Rwanda</p>
-                      <p class="product-price">$149.99</p>
-                      <button class="view-details">View Details</button>
-                  </div>
-              </div>
-          </div>
-      </section>
-      <section id="about" style="text-align: center; padding: 40px;">
-        <h2 style="color: #007bff; margin-bottom: 20px;">About Us</h2>
-        
-        <p style="max-width: 800px; margin: 0 auto 20px; color: #555; line-height: 1.6;">
-            The <strong>ShopWise Program</strong> is a new project that aims to improve retail in Africa by offering smart solutions to make stores more efficient, 
-            enhance customer experiences, and help local shops manage inventory more effectively.
-        </p>
-        
-        <p style="max-width: 800px; margin: 0 auto 20px; color: #555; line-height: 1.6;">
-            Africa’s retail market is growing rapidly due to increasing urbanization and smartphone usage. This shift has created a demand for modern and convenient shopping experiences. 
-            However, local shops face several challenges, including outdated stock management systems and limited ways to engage customers. The ShopWise Program seeks to address these issues 
-            using advanced technology, helping businesses grow and making customers happier.
-        </p>
-    
-        <h3 style="margin-top: 30px; color: #007bff; text-align: center; font-size: 24px;">Our Services</h3>
+            <h2>Featured Products</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="products/coffee.jpg" alt="Premium Rwandan Coffee">
+                        <span class="product-badge">Featured</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Premium Rwandan Coffee</h3>
+                        <p class="product-origin">Origin: Nyungwe, Rwanda</p>
+                        <p class="product-price">$24.99/kg</p>
+                        <button class="view-details">View Details</button>
+                    </div>
+                </div>
 
-        <ul style="
-        list-style: none;
-        padding: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
-        margin-top: 20px;
-    ">
-        <li style="
-            background: #f8f9fa;
-            padding: 20px;
-            border-radius: 10px;
-            width: 90%;
-            max-width: 600px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        " onmouseover="this.style.transform='scale(1.03)'; this.style.boxShadow='0 6px 12px rgba(0, 0, 0, 0.15)';" 
-           onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0, 0, 0, 0.1)';">
-            <strong style="color: #222; font-size: 18px;">Inventory Management</strong><br>
-            <span style="color: #555; font-size: 14px;">Real-time tracking to reduce waste and optimize ordering.</span>
-        </li>
-    
-        <li style="
-            background: #f8f9fa;
-            padding: 20px;
-            border-radius: 10px;
-            width: 90%;
-            max-width: 600px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        " onmouseover="this.style.transform='scale(1.03)'; this.style.boxShadow='0 6px 12px rgba(0, 0, 0, 0.15)';" 
-           onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0, 0, 0, 0.1)';">
-            <strong style="color: #222; font-size: 18px;">Customer Analytics</strong><br>
-            <span style="color: #555; font-size: 14px;">Tools to analyze shopping habits and enable personalized marketing.</span>
-        </li>
-    
-        <li style="
-            background: #f8f9fa;
-            padding: 20px;
-            border-radius: 10px;
-            width: 90%;
-            max-width: 600px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        " onmouseover="this.style.transform='scale(1.03)'; this.style.boxShadow='0 6px 12px rgba(0, 0, 0, 0.15)';" 
-           onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0, 0, 0, 0.1)';">
-            <strong style="color: #222; font-size: 18px;">Mobile Payments</strong><br>
-            <span style="color: #555; font-size: 14px;">Fast and secure payment options for seamless transactions.</span>
-        </li>
-    </ul>
-    
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="products/basket.jpeg" alt="Traditional Basket">
+                        <span class="product-badge">New</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Handwoven Peace Basket</h3>
+                        <p class="product-origin">Origin: Kigali, Rwanda</p>
+                        <p class="product-price">$39.99</p>
+                        <button class="view-details">View Details</button>
+                    </div>
+                </div>
 
-    
-        <h3 style="margin-top: 30px; color: #333;">Our Vision</h3>
-        <p style="max-width: 800px; margin: 0 auto; color: #555; line-height: 1.6;">
-            The ShopWise Program is a transformative opportunity to modernize and digitize Africa’s retail industry. By integrating smart solutions, ShopWise aims to drive technological 
-            advancement, improve customer satisfaction, and contribute to Africa’s economic development. With a strong foundation and innovative strategies, ShopWise has the potential 
-            to bring significant changes, empowering local businesses and enhancing the shopping experience for customers across the continent.
-        </p>
-    </section>
-    
-      
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="products/tea.jpeg" alt="Premium Tea Leaves">
+                    </div>
+                    <div class="product-info">
+                        <h3>Organic Tea Leaves</h3>
+                        <p class="product-origin">Origin: Gisovu, Rwanda</p>
+                        <p class="product-price">$18.99/kg</p>
+                        <button class="view-details">View Details</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="products/art.jpeg" alt="Contemporary Art">
+                        <span class="product-badge">Limited</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Contemporary Wall Art</h3>
+                        <p class="product-origin">Origin: Huye, Rwanda</p>
+                        <p class="product-price">$149.99</p>
+                        <button class="view-details">View Details</button>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <section id="how-it-works">
             <h2>How It Works</h2>
@@ -298,6 +150,18 @@
             <p>&copy; 2024 ShopWise. All rights reserved.</p>
         </div>
     </footer>
+
+    <script>
+        // Load navigation dynamically
+        document.addEventListener("DOMContentLoaded", function () {
+            fetch("nav.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("nav-placeholder").innerHTML = data;
+                })
+                .catch(error => console.error("Error loading navigation:", error));
+        });
+    </script>
 
     <script src="main.js"></script>
 </body>

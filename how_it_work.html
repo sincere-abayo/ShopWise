@@ -23,74 +23,12 @@
         .content {
             flex: 1; /* Pushes footer to the bottom */
         }
-
-        /* Navbar Styling */
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 20px;
-            background: #333;
-            color: white;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            font-size: 22px;
-            font-weight: bold;
-        }
-
-        .logo img {
-            height: 40px;
-            width: auto;
-            margin-right: 10px;
-        }
-
-        .nav-links {
-            list-style: none;
-            display: flex;
-            gap: 20px;
-        }
-
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            font-size: 16px;
-            transition: 0.3s;
-        }
-
-        .nav-links a:hover {
-            text-decoration: underline;
-            color: #ffcc00;
-        }
-
-        .login-btn {
-            background: #ffcc00;
-            color: #333;
-            padding: 8px 12px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-        }
     </style>
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="logo">
-                <img src="im2.png" alt="ShopWise Logo">
-                <span>ShopWise</span>
-            </div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#marketplace">Marketplace</a></li>
-                <li><a href="about_us.html">About</a></li>
-                <li><a href="#">How It Works</a></li>
-                <li><a href="login.html" class="login-btn">Login</a></li>
-            </ul>
-        </nav>
-    </header>
+
+    <!-- Navigation will be dynamically loaded here -->
+    <header id="nav-placeholder"></header>
 
     <div class="content">
         <section style="text-align: center; padding: 80px 20px 40px; background: #f4f4f4;">
@@ -137,5 +75,18 @@
             <p>&copy; 2024 ShopWise. All rights reserved.</p>
         </div>
     </footer>
+
+    <script>
+        // Load navigation dynamically
+        document.addEventListener("DOMContentLoaded", function () {
+            fetch("nav.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("nav-placeholder").innerHTML = data;
+                })
+                .catch(error => console.error("Error loading navigation:", error));
+        });
+    </script>
+
 </body>
 </html>
